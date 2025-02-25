@@ -178,11 +178,12 @@
 
 
 {% assign main_menu_linklist = linklists[section.settings.menu].links %}
-hello
+hello w
 <div class="relative bg-white" x-data="{ mobileMenuOpen: false }">
   <div class="mx-auto px-4 sm:px-6">
     <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
-      <!-- STORE NAME / STORE LOGO -->
+      <!-- STORE NAME / STORE LOshopify theme dev
+GO -->
       <div class="flex justify-start lg:flex-1 truncate">
         <h1 class="text-xl font-bold truncate">{{ shop.name }}</h1>
       </div>
@@ -244,9 +245,10 @@ hello
         <a href="{{ routes.cart_url }}" class="whitespace-nowrap text-base text-gray-500 hover:text-gray-900">
           {% render 'icon-shopping-bag' %}
         </a>
-
+        {% if shop.customer_accounts_enabled %}
         <a href="{{ routes.account_login_url }}" class="text-base text-gray-500 hover:text-gray-900">Login</a>
         <a href="{{ routes.account_register_url }}" class="text-base text-gray-500 hover:text-gray-900">Register</a>
+        {% endif %}
       </div>
     </div>
   </div>
