@@ -24,6 +24,11 @@
   {{ current_variant.price | money }}
   <label for="Quantity">quantity</label>
   <input type="number" id="Quantity" name="quantity" value="1" min="1">
-  <button type="submit" name="add" id="AddToCart">Add to cart</button>
+  {% comment %} <button type="submit" name="add" id="AddToCart">Add to cart</button> {% endcomment %}
+   <button type="submit" name="add" id="AddToCart" 
+    class="cursor-pointer transition duration-300 hover:bg-gray-800 hover:text-white px-4 py-2 border border-gray-600">
+    Add to cart
+</button>
+
 </form>
 <div>{{ product.description }}</div>
